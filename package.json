@@ -53,6 +53,7 @@
   },
   "keywords": [],
   "author": "kuyaed-1720",
+  "publisher": "kuyaed-1720",
   "license": "MIT",
   "devDependencies": {
     "@types/vscode": "^1.93.0",
