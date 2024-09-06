@@ -23,6 +23,10 @@ export function activate(context: vscode.ExtensionContext) {
 		const nodeTerminal = vscode.window.createTerminal('Node Server');
 		nodeTerminal.sendText('\"C:\\Program Files\\nodejs\\node.exe\"');
 		nodeTerminal.show();
+
+		const nginxTerminal = vscode.window.createTerminal('Nginx Server');
+		nginxTerminal.sendText('C:\\Users\\kuyae\\nginx.exe');
+		nginxTerminal.show();
 	});
 }
 
