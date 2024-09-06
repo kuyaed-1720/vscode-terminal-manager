@@ -9,10 +9,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:vscode-terminal-manager.startAllServices",
-    "onCommand:vscode-terminal-manager.stopAllServices"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -27,6 +24,18 @@
       {
         "command": "vscode-terminal-manager.stopAllServices",
         "title": "Stop All Services"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-terminal-manager.startAllServices",
+        "key": "ctrl+alt+s",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "vscode-terminal-manager.stopAllServices",
+        "key": "ctrl+alt+x",
+        "when": "editorTextFocus"
       }
     ]
   },
