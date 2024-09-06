@@ -27,6 +27,8 @@ export function activate(context: vscode.ExtensionContext) {
 		const nginxTerminal = vscode.window.createTerminal('Nginx Server');
 		nginxTerminal.sendText('C:\\Users\\kuyae\\nginx.exe');
 		nginxTerminal.show();
+
+		context.subscriptions.push(phpTerminal, nodeTerminal, nginxTerminal);
 	});
 }
 
