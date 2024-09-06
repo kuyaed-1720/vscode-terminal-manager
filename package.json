@@ -1,7 +1,7 @@
 {
   "name": "vscode-terminal-manager",
   "displayName": "vscode-terminal-manager",
-  "description": "",
+  "description": "A VS Code extension to manage development services",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.93.0"
@@ -9,13 +9,24 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:vscode-terminal-manager.startAllServices",
+    "onCommand:vscode-terminal-manager.stopAllServices"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-terminal-manager.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vscode-terminal-manager.startAllServices",
+        "title": "Start All Services"
+      },
+      {
+        "command": "vscode-terminal-manager.stopAllServices",
+        "title": "Stop All Services"
       }
     ]
   },
@@ -24,6 +35,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
+    "postinstall": "node ./node_modules/vscode/bin/install",
     "lint": "eslint src",
     "test": "vscode-test"
   },
