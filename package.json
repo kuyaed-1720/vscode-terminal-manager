@@ -30,12 +30,12 @@
       {
         "command": "vscode-terminal-manager.startAllServices",
         "key": "ctrl+alt+s",
-        "when": "editorTextFocus"
+        "when": "isFocus"
       },
       {
         "command": "vscode-terminal-manager.stopAllServices",
         "key": "ctrl+alt+x",
-        "when": "editorTextFocus"
+        "when": "isFocus"
       }
     ]
   },
