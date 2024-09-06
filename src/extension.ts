@@ -30,6 +30,17 @@ export function activate(context: vscode.ExtensionContext) {
 
 		context.subscriptions.push(phpTerminal, nodeTerminal, nginxTerminal);
 	});
+
+	let stopAll = vscode.commands.registerCommand('vscode-terminal-manager.stopAllServices', () => {
+		vscode.window.terminals.forEach(terminal => {
+			if (terminal.name === 'PHP Server' || terminal.name === 'Node Server' || terminal.name === 'Nginx Server') {
+				terminal.sendText('exit');
+				terminal.dispose();
+			}
+		});
+	});
+
+	context.subscriptions.push(startAll, stopAll);
 }
 
 // This method is called when your extension is deactivated
