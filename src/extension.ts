@@ -19,6 +19,10 @@ export function activate(context: vscode.ExtensionContext) {
 		const phpTerminal = vscode.window.createTerminal('PHP Server');
 		phpTerminal.sendText('php -S localhost:8000');
 		phpTerminal.show();
+
+		const nodeTerminal = vscode.window.createTerminal('Node Server');
+		nodeTerminal.sendText('\"C:\\Program Files\\nodejs\\node.exe\"');
+		nodeTerminal.show();
 	});
 }
 
